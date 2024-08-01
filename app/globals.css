@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 html {
-  background: rgb(48, 1, 113);
-  background: linear-gradient(
-    204deg,
-    rgba(48, 1, 113, 1) 5%,
-   rgba(15, 23, 42, 1) 90%
-  );
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
+  background: hsl(229 85% 8%);
+
+} 
+
+
