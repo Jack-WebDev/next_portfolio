@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
@@ -23,10 +23,10 @@ export default function ProjectCards({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full md:w-1/2 lg:w-1/3 mx-auto bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="w-full md:w-1/2 lg:w-full max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
     >
       <motion.div
-        // whileHover={{ scale: 1.02 }}
+        whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.2 }}
         className="relative"
       >
