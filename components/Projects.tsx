@@ -5,7 +5,7 @@ import audiophile from "@/assets/audiophile.png";
 
 export default function Projects() {
   return (
-    <div className="mt-[5rem] w-[90%] mx-auto">
+    <div className="mt-[5rem] w-[90%] mx-auto grid gap-y-6">
       <h2 className="text-3xl text-start text-white font-bold mb-12 sm:text-center">
         Projects
       </h2>
