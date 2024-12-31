@@ -7,8 +7,9 @@ type ProjectCardProps = {
   img: string | StaticImageData;
   title: string;
   description: string;
-  link: string;
+  link?: string;
   tools: string[];
+  inDev?: boolean;
 };
 
 export default function ProjectCards({
@@ -17,13 +18,14 @@ export default function ProjectCards({
   description,
   link,
   tools,
+  inDev,
 }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full md:w-1/2 lg:w-full max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="w-full max-w-md mx-auto bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
     >
       <motion.div
         whileHover={{ scale: 1.02 }}
@@ -48,7 +50,14 @@ export default function ProjectCards({
             {title}
           </motion.h3>
 
-          <p className="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
+          <p className="text-gray-600 dark:text-gray-300 mb-4">
+            {description}{" "}
+            {inDev && (
+              <span className="inline-block bg-yellow-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                In Development
+              </span>
+            )}
+          </p>
 
           <div className="flex flex-wrap gap-2 mb-6">
             {tools.map((tool, index) => (
@@ -62,16 +71,18 @@ export default function ProjectCards({
             ))}
           </div>
 
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-xl transition-colors duration-200"
-          >
-            View Project
-          </motion.a>
+          {inDev ? null : (
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-xl transition-colors duration-200"
+            >
+              View Project
+            </motion.a>
+          )}
         </div>
       </motion.div>
     </motion.div>

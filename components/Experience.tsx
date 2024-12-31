@@ -2,7 +2,7 @@ import Cards from "./ExperienceCards";
 
 export default function Experience() {
   return (
-<div className="mt-20 sm:mt-28 w-[90%] sm:w-[80%] lg:w-[70%] mx-auto">
+<div className="mt-20 sm:mt-28 w-[90%] sm:w-[90%] lg:w-[70%] mx-auto">
   <h2 className="text-3xl sm:text-4xl text-start sm:text-center text-white font-bold mb-12">
     Experience
   </h2>
