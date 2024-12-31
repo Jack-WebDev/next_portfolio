@@ -12,7 +12,7 @@ export default function Cards({
   tools,
 }: ExperienceProps) {
   return (
-    <div className="flex flex-col gap-x-8 justify-center items-baseline mt-12 sm:flex-row xl:w-[45%] xl:mx-auto">
+    <div className="flex flex-col gap-x-8 justify-center items-baseline mt-12 sm:flex-row xl:w-[70%] xl:mx-auto">
       <span className={` text-white font-medium w-full`}>{duration}</span>
       <div>
         <h3 className={` text-white font-bold`}>{company}</h3>
