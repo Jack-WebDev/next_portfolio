@@ -3,6 +3,8 @@ import eCommercePage from "@/assets/ecommercePage.png";
 import audiophile from "@/assets/audiophile.png";
 import notesflow from "@/assets/notesflow.png";
 import ahsa from "@/assets/ahsa.png";
+import cliLanding from "@/assets/cli-landing.png";
+import mziyonke from "@/assets/mziyonke.png";
 
 export default function Projects() {
   return (
@@ -38,6 +40,20 @@ export default function Projects() {
           description="Simplify your life and stay organized with this elegant note-taking app! Effortlessly create, categorize, and manage your notes with a clean, intuitive interface. Tag your notes for easy searching, archive completed tasks, and never lose track of important details. Designed for productivity, this app is perfect for personal, professional, or creative use. Whether planning your next trip, optimizing code, or storing your favorite recipes, this tool keeps everything at your fingertips."
           tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
           inDev={true}
+        />
+        <ProjectCards
+          img={cliLanding}
+          title="CodeForge CLI Landing Page"
+          description="A landing page for a CLI I created that helps developers automate tasks and boost productivity."
+          tools={["Next.js 14", "TailwindCSS"]}
+          link="https://codeforge-landing-page.vercel.app/"
+        />
+        <ProjectCards
+          img={mziyonke}
+          title="Mziyonke Driving School Website"
+          description="I was tasked to revamp the Mziyonke website to give it a modern feel."
+          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
+          link="https://mziyonke-driving-school.vercel.app/"
         />
       </div>
     </div>
