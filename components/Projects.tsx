@@ -14,13 +14,6 @@ export default function Projects() {
       </h2>
       <div className="grid gap-y-12 sm:gap-y-8 md:gap-8 lg:gap-12 lg:grid-cols-2">
         <ProjectCards
-          img={audiophile}
-          title="Audiophile E-Commerce"
-          description="Step into the ultimate shopping experience for audio enthusiasts! This cutting-edge e-commerce platform offers a curated selection of premium speakers, earphones, and headphones. Enjoy seamless navigation, dynamic cart updates, and a lightning-fast checkout process with real-time form validation. Whether you're a casual listener or an audiophile, this project is designed to elevate your shopping experience like never before!"
-          link="https://audiophile-eta-ten.vercel.app/"
-          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
-        />
-        <ProjectCards
           img={cliLanding}
           title="CodeForge CLI Landing Page"
           description="A landing page for a CLI I created that helps developers automate tasks and boost productivity."
@@ -33,6 +26,13 @@ export default function Projects() {
           description="I was tasked to revamp the Mziyonke website to give it a modern feel."
           tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
           link="https://mziyonke-driving-school.vercel.app/"
+        />
+        <ProjectCards
+          img={audiophile}
+          title="Audiophile E-Commerce"
+          description="Step into the ultimate shopping experience for audio enthusiasts! This cutting-edge e-commerce platform offers a curated selection of premium speakers, earphones, and headphones. Enjoy seamless navigation, dynamic cart updates, and a lightning-fast checkout process with real-time form validation. Whether you're a casual listener or an audiophile, this project is designed to elevate your shopping experience like never before!"
+          link="https://audiophile-eta-ten.vercel.app/"
+          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
         />
         <ProjectCards
           img={ahsa}
