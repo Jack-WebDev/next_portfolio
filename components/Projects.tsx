@@ -21,6 +21,20 @@ export default function Projects() {
           tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
         />
         <ProjectCards
+          img={cliLanding}
+          title="CodeForge CLI Landing Page"
+          description="A landing page for a CLI I created that helps developers automate tasks and boost productivity."
+          tools={["Next.js 14", "TailwindCSS"]}
+          link="https://codeforge-landing-page.vercel.app/"
+        />
+        <ProjectCards
+          img={mziyonke}
+          title="Mziyonke Driving School Website"
+          description="I was tasked to revamp the Mziyonke website to give it a modern feel."
+          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
+          link="https://mziyonke-driving-school.vercel.app/"
+        />
+        <ProjectCards
           img={ahsa}
           title="Affordable Housing South Africa (AHSA)"
           description="AHSA is a platform that promotes accessible and affordable housing solutions for South Africans. Designed to empower individuals and families, AHSA provides a user-friendly interface for managing housing applications, accessing funding opportunities, and exploring homeownership programs. With a focus on innovation and accessibility, AHSA aims to simplify the process of securing affordable housing and make the dream of homeownership a reality for all South Africans."
@@ -40,20 +54,6 @@ export default function Projects() {
           description="Simplify your life and stay organized with this elegant note-taking app! Effortlessly create, categorize, and manage your notes with a clean, intuitive interface. Tag your notes for easy searching, archive completed tasks, and never lose track of important details. Designed for productivity, this app is perfect for personal, professional, or creative use. Whether planning your next trip, optimizing code, or storing your favorite recipes, this tool keeps everything at your fingertips."
           tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
           inDev={true}
-        />
-        <ProjectCards
-          img={cliLanding}
-          title="CodeForge CLI Landing Page"
-          description="A landing page for a CLI I created that helps developers automate tasks and boost productivity."
-          tools={["Next.js 14", "TailwindCSS"]}
-          link="https://codeforge-landing-page.vercel.app/"
-        />
-        <ProjectCards
-          img={mziyonke}
-          title="Mziyonke Driving School Website"
-          description="I was tasked to revamp the Mziyonke website to give it a modern feel."
-          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
-          link="https://mziyonke-driving-school.vercel.app/"
         />
       </div>
     </div>
