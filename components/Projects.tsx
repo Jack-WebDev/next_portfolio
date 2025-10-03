@@ -1,61 +1,119 @@
+"use client"
+
 import ProjectCards from "./ProjectCards";
-import eCommercePage from "@/assets/ecommercePage.png";
 import audiophile from "@/assets/audiophile.png";
-import notesflow from "@/assets/notesflow.png";
-import ahsa from "@/assets/ahsa.png";
-import cliLanding from "@/assets/cli-landing.png";
+import photosnap from "@/assets/photosnap.png";
 import mziyonke from "@/assets/mziyonke.png";
 
 export default function Projects() {
+  const projects = [
+    {
+      img: photosnap,
+      title: "Photosnap - Photo Gallery",
+      description: "Photosnap is a photo gallery for creatives. With a sleek and modern design, it's the perfect platform for showcasing photography skills.",
+      tools: ["Astro.js", "TailwindCSS", "React.js"],
+      link: "https://photosnap-silk-six.vercel.app/",
+      gitHubLink: "https://github.com/Jack-WebDev/photosnap"
+    },
+    {
+      img: mziyonke,
+      title: "Mziyonke Driving School Website",
+      description: "I was tasked to revamp the Mziyonke website to give it a modern feel.",
+      tools: ["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"],
+      link: "https://mziyonke-driving-school.vercel.app/",
+      gitHubLink: "https://github.com/Jack-WebDev/mziyonke_driving_school"
+    },
+    {
+      img: audiophile,
+      title: "Audiophile E-Commerce",
+      description: "Step into the ultimate shopping experience for audio enthusiasts! This cutting-edge e-commerce platform offers a curated selection of premium speakers, earphones, and headphones. Enjoy seamless navigation, dynamic cart updates, and a lightning-fast checkout process with real-time form validation.",
+      link: "https://audiophile-eta-ten.vercel.app/",
+      tools: ["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"],
+      gitHubLink: "https://github.com/Jack-WebDev/audiophile"
+    }
+  ];
+
   return (
-    <div className="mt-20 sm:mt-28 w-[90%] mx-auto">
-      <h2 className="text-3xl sm:text-4xl text-start sm:text-center text-white font-bold mb-12">
-        Projects
-      </h2>
-      <div className="grid gap-y-12 sm:gap-y-8 md:gap-8 lg:gap-12 lg:grid-cols-2">
-        <ProjectCards
-          img={cliLanding}
-          title="CodeForge CLI Landing Page"
-          description="A landing page for a CLI I created that helps developers automate tasks and boost productivity."
-          tools={["Next.js 14", "TailwindCSS"]}
-          link="https://codeforge-landing-page.vercel.app/"
-        />
-        <ProjectCards
-          img={mziyonke}
-          title="Mziyonke Driving School Website"
-          description="I was tasked to revamp the Mziyonke website to give it a modern feel."
-          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
-          link="https://mziyonke-driving-school.vercel.app/"
-        />
-        <ProjectCards
-          img={audiophile}
-          title="Audiophile E-Commerce"
-          description="Step into the ultimate shopping experience for audio enthusiasts! This cutting-edge e-commerce platform offers a curated selection of premium speakers, earphones, and headphones. Enjoy seamless navigation, dynamic cart updates, and a lightning-fast checkout process with real-time form validation. Whether you're a casual listener or an audiophile, this project is designed to elevate your shopping experience like never before!"
-          link="https://audiophile-eta-ten.vercel.app/"
-          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
-        />
-        <ProjectCards
-          img={ahsa}
-          title="Affordable Housing South Africa (AHSA)"
-          description="AHSA is a platform that promotes accessible and affordable housing solutions for South Africans. Designed to empower individuals and families, AHSA provides a user-friendly interface for managing housing applications, accessing funding opportunities, and exploring homeownership programs. With a focus on innovation and accessibility, AHSA aims to simplify the process of securing affordable housing and make the dream of homeownership a reality for all South Africans."
-          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
-          inDev={true}
-        />
-        <ProjectCards
-          img={eCommercePage}
-          title="E-Commerce Product Page"
-          description='Experience the perfect blend of style and functionality with this sleek product page for "Fall Limited Edition Sneakers." Featuring a bold, high-impact design, it showcases the product with stunning visuals and dynamic interactions. Effortlessly adjust quantities, explore details, and add to your cart with a vibrant, standout button that ensures a smooth and enjoyable shopping journey. This page is designed to turn casual visitors into loyal customers!'
-          link="https://e-commerce-product-page-neon-theta.vercel.app/"
-          tools={["React-Typescript", "Vite", "TailwindCSS", "Framer Motion"]}
-        />
-        <ProjectCards
-          img={notesflow}
-          title="NotesFlow"
-          description="Simplify your life and stay organized with this elegant note-taking app! Effortlessly create, categorize, and manage your notes with a clean, intuitive interface. Tag your notes for easy searching, archive completed tasks, and never lose track of important details. Designed for productivity, this app is perfect for personal, professional, or creative use. Whether planning your next trip, optimizing code, or storing your favorite recipes, this tool keeps everything at your fingertips."
-          tools={["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"]}
-          inDev={true}
-        />
+    <section className="relative py-20 sm:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-950 to-black pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="relative w-[90%] max-w-7xl mx-auto">
+        <div className="text-center mb-16 sm:mb-20 space-y-4">
+
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-blue-100  bg-clip-text text-transparent">
+            My Projects
+          </h2>
+     
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="opacity-0 animate-fade-in"
+              style={{
+                animationDelay: `${index * 150}ms`,
+                animationFillMode: 'forwards'
+              }}
+            >
+              <ProjectCards
+                img={project.img}
+                title={project.title}
+                description={project.description}
+                tools={project.tools}
+                link={project.link}
+                gitHubLink={project.gitHubLink}
+              />
+            </div>
+          ))}
+          
+          {[...Array(Math.max(0, 8 - projects.length))].map((_, index) => (
+            <div
+              key={`placeholder-${index}`}
+              className="opacity-0 animate-fade-in group"
+              style={{
+                animationDelay: `${(projects.length + index) * 150}ms`,
+                animationFillMode: 'forwards'
+              }}
+            >
+              <div className="w-full h-full bg-gradient-to-br from-gray-800/40 to-gray-900/40 rounded-2xl border border-dashed border-gray-700 hover:border-blue-500/50 transition-all duration-500 overflow-hidden backdrop-blur-sm min-h-[500px] flex flex-col items-center justify-center p-8 relative">
+                <div className="relative z-10 text-center space-y-4">
+                  <div className="w-20 h-20 mx-auto rounded-full bg-gray-800/50 flex items-center justify-center border border-gray-700">
+                    <svg className="w-10 h-10 text-gray-600  transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    </svg>
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold text-gray-500 ">
+                      Coming Soon
+                    </h3>
+         
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
       </div>
-    </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+      `}</style>
+    </section>
   );
 }

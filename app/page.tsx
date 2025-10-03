@@ -6,17 +6,16 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Roadmap from "@/components/Roadmap";
 
-
 export default function Home() {
   return (
     <div className="mb-[10rem]">
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <About />
       <Experience />
-      <Projects/>
-      <Roadmap/>
-      <CTA/>
+      <Projects />
+      {/* <Roadmap /> */}
+      <CTA />
     </div>
   );
 }
