@@ -4,7 +4,7 @@ import ProjectCards from "./ProjectCards";
 import audiophile from "@/assets/audiophile.png";
 import photosnap from "@/assets/photosnap.png";
 import mziyonke from "@/assets/mziyonke.png";
-import spaceTour from "@/assets/spaceTour.png";
+import spaceTour from "@/assets/spacetour.png";
 
 export default function Projects() {
   const projects = [
