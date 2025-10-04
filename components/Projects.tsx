@@ -1,50 +1,61 @@
-"use client"
+"use client";
 
 import ProjectCards from "./ProjectCards";
 import audiophile from "@/assets/audiophile.png";
 import photosnap from "@/assets/photosnap.png";
 import mziyonke from "@/assets/mziyonke.png";
+import spaceTour from "@/assets/spaceTour.png";
 
 export default function Projects() {
   const projects = [
     {
       img: photosnap,
       title: "Photosnap - Photo Gallery",
-      description: "Photosnap is a photo gallery for creatives. With a sleek and modern design, it's the perfect platform for showcasing photography skills.",
+      description:
+        "Photosnap is a photo gallery for creatives. With a sleek and modern design, it's the perfect platform for showcasing photography skills.",
       tools: ["Astro.js", "TailwindCSS", "React.js"],
       link: "https://photosnap-silk-six.vercel.app/",
-      gitHubLink: "https://github.com/Jack-WebDev/photosnap"
+      gitHubLink: "https://github.com/Jack-WebDev/photosnap",
     },
     {
       img: mziyonke,
       title: "Mziyonke Driving School Website",
-      description: "I was tasked to revamp the Mziyonke website to give it a modern feel.",
+      description:
+        "I was tasked to revamp the Mziyonke website to give it a modern feel.",
       tools: ["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"],
       link: "https://mziyonke-driving-school.vercel.app/",
-      gitHubLink: "https://github.com/Jack-WebDev/mziyonke_driving_school"
+      gitHubLink: "https://github.com/Jack-WebDev/mziyonke_driving_school",
     },
     {
       img: audiophile,
       title: "Audiophile E-Commerce",
-      description: "Step into the ultimate shopping experience for audio enthusiasts! This cutting-edge e-commerce platform offers a curated selection of premium speakers, earphones, and headphones. Enjoy seamless navigation, dynamic cart updates, and a lightning-fast checkout process with real-time form validation.",
+      description:
+        "Step into the ultimate shopping experience for audio enthusiasts! This cutting-edge e-commerce platform offers a curated selection of premium speakers, earphones, and headphones. Enjoy seamless navigation, dynamic cart updates, and a lightning-fast checkout process with real-time form validation.",
       link: "https://audiophile-eta-ten.vercel.app/",
       tools: ["Next.js 14", "TailwindCSS", "Shadcn UI", "Framer Motion"],
-      gitHubLink: "https://github.com/Jack-WebDev/audiophile"
-    }
+      gitHubLink: "https://github.com/Jack-WebDev/audiophile",
+    },
+    {
+      img: spaceTour,
+      title: "Space Tourism",
+      description:
+        "Space Tourism is a platform that offers a unique experience for space enthusiasts. With a sleek and modern design, it's the perfect platform for showcasing space-related content.",
+      link: "https://space-tourism-xi-lilac.vercel.app/",
+      tools: ["Vite", "TailwindCSS", "Shadcn UI", "React.js"],
+      gitHubLink: "https://github.com/Jack-WebDev/space-tourism",
+    },
   ];
 
   return (
     <section className="relative py-20 sm:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-950 to-black pointer-events-none" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-      
+
       <div className="relative w-[90%] max-w-7xl mx-auto">
         <div className="text-center mb-16 sm:mb-20 space-y-4">
-
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-blue-100  bg-clip-text text-transparent">
             My Projects
           </h2>
-     
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10">
@@ -54,7 +65,7 @@ export default function Projects() {
               className="opacity-0 animate-fade-in"
               style={{
                 animationDelay: `${index * 150}ms`,
-                animationFillMode: 'forwards'
+                animationFillMode: "forwards",
               }}
             >
               <ProjectCards
@@ -67,36 +78,43 @@ export default function Projects() {
               />
             </div>
           ))}
-          
+
           {[...Array(Math.max(0, 8 - projects.length))].map((_, index) => (
             <div
               key={`placeholder-${index}`}
               className="opacity-0 animate-fade-in group"
               style={{
                 animationDelay: `${(projects.length + index) * 150}ms`,
-                animationFillMode: 'forwards'
+                animationFillMode: "forwards",
               }}
             >
               <div className="w-full h-full bg-gradient-to-br from-gray-800/40 to-gray-900/40 rounded-2xl border border-dashed border-gray-700 hover:border-blue-500/50 transition-all duration-500 overflow-hidden backdrop-blur-sm min-h-[500px] flex flex-col items-center justify-center p-8 relative">
                 <div className="relative z-10 text-center space-y-4">
                   <div className="w-20 h-20 mx-auto rounded-full bg-gray-800/50 flex items-center justify-center border border-gray-700">
-                    <svg className="w-10 h-10 text-gray-600  transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                    <svg
+                      className="w-10 h-10 text-gray-600  transition-colors duration-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 4v16m8-8H4"
+                      />
                     </svg>
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold text-gray-500 ">
                       Coming Soon
                     </h3>
-         
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-
       </div>
 
       <style jsx>{`

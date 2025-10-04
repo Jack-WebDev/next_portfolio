@@ -2,6 +2,7 @@
 
 import Image, { StaticImageData } from "next/image";
 import { ExternalLink, Github } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 type ProjectCardProps = {
   img: string | StaticImageData;
@@ -70,7 +71,7 @@ export default function ProjectCards({
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 flex-1 justify-center bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-800 hover:to-gray-900 dark:from-gray-700 dark:to-gray-600 dark:hover:from-gray-600 dark:hover:to-gray-500 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
-                <Github className="w-4 h-4" />
+                <FaGithub className="text-gray-400 hover:text-white text-2xl lg:text-3xl transition-colors duration-300" />
                 View Github
               </a>
             ) : (
@@ -82,7 +83,7 @@ export default function ProjectCards({
                   className="flex items-center gap-2 flex-1 justify-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  View Project
+                  Live Site
                 </a>
                 <a
                   href={gitHubLink}
