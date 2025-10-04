@@ -43,6 +43,7 @@ export default function Projects() {
       link: "https://space-tourism-xi-lilac.vercel.app/",
       tools: ["Vite", "TailwindCSS", "Shadcn UI", "React.js"],
       gitHubLink: "https://github.com/Jack-WebDev/space-tourism",
+      inDev: true,
     },
   ];
 
@@ -75,6 +76,7 @@ export default function Projects() {
                 tools={project.tools}
                 link={project.link}
                 gitHubLink={project.gitHubLink}
+                inDev={project.inDev}
               />
             </div>
           ))}
